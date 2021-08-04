@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Central de Aplicações
+Exec=/opt/apps/centralAplicacoes/./Central-Aplicacoes.AppImage --no-sandbox
+Terminal=false
+Type=Application
+Icon=/opt/apps/centralAplicacoes/fsj-centralAplicacoes-desktop.png
+StartupWMClass=Central-de-Aplicacoes
+Comment=Central de Aplicações - Área onde engloba várias aplicações da Rede de Farmácias São João
+Categories=Utility;

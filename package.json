@@ -1,0 +1,65 @@
+{
+  "name": "fsj-link-projects-desktop",
+  "version": "1.0.1",
+  "description": "Aplicação desktop desenvolvida em Electron para rodar a Central de Aplicações",
+  "main": "src/electron-starter.js",
+  "private": true,
+  "author": {
+    "name": "Comércio de Medicamentos Brair Ltda",
+    "email": "tihelpdesk@farmaciassaojoao.com.br",
+    "url": "http://saojoaofarmacias.com.br"
+  },
+  "scripts": {
+    "start": "cross-env NODE_ENV=development electron .",
+    "build": "yarn build:linux && yarn build:win",
+    "build:linux": "electron-builder --dir && electron-builder",
+    "build:win": "electron-builder --dir --win && electron-builder --win"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "electron-simple-updater": "https://github.com/AdemilsonMarsiglio/electron-simple-updater.git#linux-appimage-nosandbox",
+    "electron-toaster": "^2.0.4"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "electron": "^11.3.0",
+    "electron-builder": "^22.9.1",
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-import-helpers": "^1.1.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "prettier": "^2.0.5"
+  },
+  "homepage": "./",
+  "build": {
+    "appId": "br.com.fsj.centralAplicacoes",
+    "files": [
+      "./src/**/*",
+      "./assets/**/*",
+      "./.env"
+    ],
+    "extends": null,
+    "productName": "Central-aplicacoes",
+    "asar": false,
+    "linux": {
+      "target": [
+        "AppImage"
+      ]
+    },
+    "win": {
+      "icon": "assets/icons/icon.ico",
+      "target": [
+        "zip"
+      ]
+    },
+    "directories": {
+      "buildResources": "assets"
+    }
+  }
+}
