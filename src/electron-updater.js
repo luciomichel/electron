@@ -9,7 +9,7 @@ const tempoVerificacaoVersao = 30 * 60 * 1000;
 const init = () => {
   updater.init({
     url:
-      'https://nexus.farmaciassaojoao.com.br/repository/static-hosted/tele-entrega/updater.json',
+      'https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/updater.json',
     checkUpdateOnStart: false,
   });
 

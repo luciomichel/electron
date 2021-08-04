@@ -1,13 +1,13 @@
 {
   "linux-x64-prod": {
-    "update": "https://nexus.farmaciassaojoao.com.br/repository/static-hosted/tele-entrega/Tele-entrega-1.0.1.AppImage",
-    "install": "https://nexus.farmaciassaojoao.com.br/repository/static-hosted/tele-entrega/Tele-entrega-1.0.1.AppImage",
+    "update": "https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/Central-aplicacoes-1.0.1.AppImage",
+    "install": "https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/Central-aplicacoes-1.0.1.AppImage",
     "version": "1.0.1",
     "sha256": "de89b299dc2016e3bc8b147a460eefbb591d5e50646e646bc20f66be21c6e060"
   },
   "win32-x64-prod": {
-    "update": "https://nexus.farmaciassaojoao.com.br/repository/static-hosted/tele-entrega/Tele-entrega-1.0.1-win.zip",
-    "install": "https://nexus.farmaciassaojoao.com.br/repository/static-hosted/tele-entrega/Tele-entrega-1.0.1-win.zip",
+    "update": "https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/Central-aplicacoes-1.0.1-win.zip",
+    "install": "https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/Central-aplicacoes-1.0.1-win.zip",
     "version": "1.0.1",
     "sha256": "789870b082202fdcf2bfd7e67323dada761a24920176627741b01ae86b33b01d"
   }

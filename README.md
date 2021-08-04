@@ -9,4 +9,4 @@
 Para realizar o build do projeto basta executar o comando `yarn build`. Caso esteja no Linux, é necessário ter instalado o [Wine](https://www.winehq.org/).
 Por fim, caso alterado a URL do projeto, deve ser alterado a URL de redirecionamento do arquivo `index.html`.
 O ícone da aplicação, para o linux deve ser personalizado, pois o AppImage não gera automaticamente. Detalhes do executável [neste link](https://developer.gnome.org/integration-guide/stable/desktop-files.html.en).
-O link executável (tele.desktop) está dentro da pasta assets.
+O link executável (centra-aplicacao.desktop) está dentro da pasta assets.
