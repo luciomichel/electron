@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # Pré-requisitos para rodar este comando:
+mkdir /opt/apps
 mkdir /opt/apps/centralAplicacoes
 
 # Indo para o diretório correto
