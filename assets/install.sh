@@ -7,12 +7,12 @@ mkdir /opt/apps/centralAplicacoes
 cd /opt/apps/centralAplicacoes
 
 # Baixando a app
-rm -rf /opt/apps/centralAplicacoes/centralAplicacoes.AppImage
-wget -O centralAplicacoes.AppImage https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/Central-aplicacoes-1.0.1.AppImage
+rm -rf /opt/apps/centralAplicacoes/Central-aplicacoes-1.0.1.AppImage
+wget -O Central-aplicacoes-1.0.1.AppImage https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/Central-aplicacoes-1.0.1.AppImage
 
 # Baixando a entrada para o menu
-rm -rf /opt/apps/centralAplicacoes/centralAplicacoes.desktop
-wget https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/centralAplicacoes.desktop
+rm -rf /opt/apps/centralAplicacoes/fsj-centralAplicacoes-deskto.desktop
+wget https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/fsj-centralAplicacoes-desktop.desktop
 
 # Baixando o icone
 rm -rf /opt/apps/centralAplicacoes/fsj-centralAplicacoes-desktop.png
@@ -22,4 +22,4 @@ wget https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-apli
 chmod a+x Central-aplicacoes-1.0.1.AppImage
 
 # Criando a entrada no menu
-cp /opt/apps/centralAplicacoes/centralAplicacoes.desktop /usr/share/applications
+cp /opt/apps/centralAplicacoes/fsj-centralAplicacoes-desktop.desktop /usr/share/applications
