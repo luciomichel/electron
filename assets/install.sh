@@ -11,7 +11,7 @@ rm -rf /opt/apps/centralAplicacoes/Central-aplicacoes-1.0.1.AppImage
 wget -O Central-aplicacoes-1.0.1.AppImage https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/Central-aplicacoes-1.0.1.AppImage
 
 # Baixando a entrada para o menu
-rm -rf /opt/apps/centralAplicacoes/fsj-centralAplicacoes-deskto.desktop
+rm -rf /opt/apps/centralAplicacoes/fsj-centralAplicacoes-desktop.desktop
 wget https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/fsj-centralAplicacoes-desktop.desktop
 
 # Baixando o icone
