@@ -1,7 +1,6 @@
-#!/usr/bin/env xdg-open
 [Desktop Entry]
 Name=Central de Aplicações
-Exec=/opt/apps/centralAplicacoes/.Central-aplicacoes-1.0.1.AppImage --no-sandbox
+Exec=/opt/apps/centralAplicacoes/./Central-aplicacoes-1.0.1.AppImage --no-sandbox
 Terminal=false
 Type=Application
 Icon=/opt/apps/centralAplicacoes/fsj-centralAplicacoes-desktop.png
