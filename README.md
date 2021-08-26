@@ -17,6 +17,12 @@ Para realizar a instalação da Central de Aplicações em um PDV, necessário c
 
 OBS.: A instalação não cria um atalho para a aplicação, o mesmo deve ser feito manualmente.
 
+## Gerando nova versão
+
+Após realizar o build da aplicação, será necessário incrementar a versão no arquivo `updater.json` e atualizar o `sha256` com o novo hash da versão gerada, o comando para gerar esse novo hash é `sha256sum <<CAMINHO_ARQUIVO>>`, em seguinda baste apenas fazer o upload no nexus dos novos arquivos buildados e do `updater.json`.
+
+https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/updater.json
+
 ## Atualização automática
 
 Usamos uma dependência (_electron-simple-updater_), que atualiza a aplicação automaticamente.
