@@ -19,15 +19,24 @@ OBS.: A instalação não cria um atalho para a aplicação, o mesmo deve ser fe
 
 ## Gerando nova versão
 
+> Para compilar em HML é necessário realizar duas alteração no fonte, URL da aplicação principal e URL do Nexus para atualização automática. Arquivos abaixo;
+> * electron-updater.js
+> * index.html
+>
+> ### **_Os endereços de HML estão comentados no código_**
+
 Após realizar o build da aplicação, será necessário incrementar a versão no arquivo `updater.json` e atualizar o `sha256` com o novo hash da versão gerada, o comando para gerar esse novo hash é `sha256sum <<CAMINHO_ARQUIVO>>`, em seguinda baste apenas fazer o upload no nexus dos novos arquivos buildados e do `updater.json`.
 
-https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/updater.json
+* PROD:
+  * https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/updater.json
+* HML:
+  * https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes-hml/updater.json
 
 ## Atualização automática
 
 Usamos uma dependência (_electron-simple-updater_), que atualiza a aplicação automaticamente.
 Apenas precisamos apontar um arquivo json (_updater.json_) que deve ficar hospedado em um servidor sem autenticação de arquivos.
-Estamos hospedando o mesmo no [nexus interno](https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/updater.json) .
+Estamos hospedando o mesmo no [nexus interno - PROD](https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/updater.json) / [nexus interno - HML](https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes-hml/updater.json) .
 Sempre que tiver uma atualização disponível, o app irá enviar uma requisição para a [API de gerenciamento](http://192.168.0.37:11000/swagger-ui.html) de versão com os seguintes dados:
 
 ```

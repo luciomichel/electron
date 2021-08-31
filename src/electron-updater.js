@@ -7,6 +7,7 @@ const axios = require('axios');
 const tempoVerificacaoVersao = 30 * 60 * 1000;
 
 const init = () => {
+  // TODO: Para compilar em HML alterar o endereco abaixo para https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes-hml/updater.json
   updater.init({
     url:
       'https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/updater.json',
