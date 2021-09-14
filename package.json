@@ -1,6 +1,6 @@
 {
   "name": "fsj-link-projects-desktop",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Aplicação desktop desenvolvida em Electron para rodar a Central de Aplicações",
   "main": "src/electron-starter.js",
   "private": true,
