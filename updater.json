@@ -1,14 +1,14 @@
 {
   "linux-x64-prod": {
-    "update": "https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/Central-aplicacoes-2.0.0.AppImage",
-    "install": "https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/Central-aplicacoes-2.0.0.AppImage",
-    "version": "2.0.0",
-    "sha256": "78f1241ec3b78fac4a606c769b21a568e3b8ad789d95c3461cbd3f4ceb99aea9"
+    "update": "https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/Central-aplicacoes.AppImage",
+    "install": "https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/Central-aplicacoes.AppImage",
+    "version": "2.0.1",
+    "sha256": "9648863f6ba3468113dad0c584732a3ee1d57b7cc0fd7c412e10e33f2875f009"
   },
   "win32-x64-prod": {
-    "update": "https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/Central-aplicacoes-2.0.0-win.zip",
-    "install": "https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/Central-aplicacoes-2.0.0-win.zip",
-    "version": "2.0.0",
-    "sha256": "789870b082202fdcf2bfd7e67323dada761a24920176627741b01ae86b33b01d"
+    "update": "https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/Central-aplicacoes-win.zip",
+    "install": "https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/Central-aplicacoes-win.zip",
+    "version": "2.0.6",
+    "sha256": "7dbdb40f53bca63bba234d431ce248117cdd72a9b6be51ffab0f946587285495"
   }
 }

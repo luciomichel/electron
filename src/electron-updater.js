@@ -4,36 +4,16 @@ const path = require('path');
 const { dialog, Notification, app } = require('electron');
 const axios = require('axios');
 
-const tempoVerificacaoVersao = 30 * 60 * 1000;
-
 const init = () => {
   // TODO: Para compilar em HML alterar o endereco abaixo para https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes-hml/updater.json
   updater.init({
     url:
       'https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/updater.json',
-    checkUpdateOnStart: false,
+    checkUpdateOnStart: true,
   });
 
   attachUpdaterHandlers();
-
-  setTimeout(() => {
-    console.log('Iniciando app versao:', app.getVersion());
-
-    recursiveCheckVersion();
-  }, 10 * 1000);
-};
-
-const recursiveCheckVersion = () => {
-  checkVersion();
-
-  setTimeout(() => {
-    recursiveCheckVersion();
-  }, tempoVerificacaoVersao);
-};
-
-const checkVersion = () => {
-  console.log('verificando atualizacoes...');
-  updater.checkForUpdates();
+  console.log('Iniciando app versao:', app.getVersion());
 };
 
 function showNotification({ title, body }) {
@@ -86,7 +66,7 @@ function attachUpdaterHandlers() {
 
 async function verificarVersaoNoServidor(novaVersao) {
   const data = {
-    app: 'FSJ_CENTRAL_APLICACOES',
+    sistema: 'CENTRALAPLICACOES',
     versaoAtual: app.getVersion(),
     versaoNova: novaVersao,
     so: os.platform(),
@@ -97,8 +77,9 @@ async function verificarVersaoNoServidor(novaVersao) {
   // console.log('Manda a versão para o servidor', data);
 
   try {
+    console.log(`Body request ${JSON.stringify(data)}`)
     const resp = await axios.post(
-      'http://192.168.0.37:11000' + '/gerenciadorversao/consultarVersao',
+      'http://192.168.0.37:11000/gerenciadorversao/consultarVersao',
       data,
       {
         timeout: 5000,
