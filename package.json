@@ -46,7 +46,7 @@
     ],
     "extends": null,
     "productName": "Central-aplicacoes",
-    "asar": false,
+    "asar": true,
     "linux": {
       "target": [
         "AppImage"
