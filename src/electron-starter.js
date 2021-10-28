@@ -10,9 +10,8 @@ let mainWindow;
 const beEaster = ['N', 'N', 'N'];
 
 const getTitle = (subTitle) => {
-  const nome = require('./../package.json').name;
   const versao = require('./../package.json').version;
-  const windowTitle = `Central de Aplicações(${nome}) - ${app.getVersion()}(${versao}) - ${subTitle}`;
+  const windowTitle = `Central de Aplicações - ${versao} - ${subTitle}`;
   return windowTitle;
 };
 
