@@ -70,6 +70,47 @@ function createWindow() {
     e.preventDefault();
     mainWindow.setTitle(getTitle(title));
   });
+  mainWindow.webContents.session.on(
+    'will-download',
+    (event, item, webContents) => {
+      var fs = require('fs');
+
+      // Set the save path, making Electron not to prompt a save dialog.
+      const filePath = app.getPath('home') + '/Etiquetas/';
+      // delete directory recursively
+      try {
+        fs.rmdirSync(filePath, { recursive: true });
+        console.log(`${filePath} is deleted!`);
+      } catch (err) {
+        console.error(`Error while deleting ${filePath}.`);
+      }
+
+      if (!fs.existsSync(filePath)){
+        fs.mkdirSync(filePath);
+      }
+
+      const fileNameAndPath = filePath + item.getFilename();
+      item.setSavePath(fileNameAndPath);
+      item.on('updated', (event, state) => {
+        if (state === 'interrupted') {
+          console.log('Download is interrupted but can be resumed');
+        } else if (state === 'progressing') {
+          if (item.isPaused()) {
+            console.log('Download is paused');
+          } else {
+            console.log(`Received bytes: ${item.getReceivedBytes()}`);
+          }
+        }
+      });
+      item.once('done', (event, state) => {
+        if (state === 'completed') {
+          console.log('Download successfully');
+        } else {
+          console.log(`Download failed: ${state}`);
+        }
+      });
+    }
+  );
 }
 
 app.on('ready', createWindow);
