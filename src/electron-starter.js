@@ -1,5 +1,6 @@
 const path = require('path');
 const electron = require('electron');
+const { shell } = require('electron');
 require('dotenv').config();
 
 require('./electron-updater');
@@ -76,7 +77,7 @@ function createWindow() {
       var fs = require('fs');
 
       // Set the save path, making Electron not to prompt a save dialog.
-      const filePath = app.getPath('home') + '/Etiquetas/';
+      var filePath = app.getPath('home') + '/Etiquetas/';
       // delete directory recursively
       try {
         fs.rmdirSync(filePath, { recursive: true });
@@ -105,6 +106,7 @@ function createWindow() {
       item.once('done', (event, state) => {
         if (state === 'completed') {
           console.log('Download successfully');
+          shell.showItemInFolder(fileNameAndPath);
         } else {
           console.log(`Download failed: ${state}`);
         }
