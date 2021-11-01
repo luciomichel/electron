@@ -106,7 +106,8 @@ function createWindow() {
       item.once('done', (event, state) => {
         if (state === 'completed') {
           console.log('Download successfully');
-          shell.showItemInFolder(fileNameAndPath);
+          console.log(fileNameAndPath);
+          shell.openExternal('file:' + fileNameAndPath);
         } else {
           console.log(`Download failed: ${state}`);
         }
