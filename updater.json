@@ -3,12 +3,12 @@
     "update": "https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/Central-aplicacoes.AppImage",
     "install": "https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/Central-aplicacoes.AppImage",
     "version": "2.0.2",
-    "sha256": "42d0f6f02f4377a67b0b6407ee0df68b3d0bc46370912547d8ae6cb813f20d58"
+    "sha256": "b4727f537c2420faf69c5d68c70a466a1c446b4bb67aad4e654afad71ad7212a"
   },
   "win32-x64-prod": {
     "update": "https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/Central-aplicacoes-win.zip",
     "install": "https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/Central-aplicacoes-win.zip",
     "version": "2.0.2",
-    "sha256": "85c593d2437027c8155ea06a73e1f6859dec1af14549768bfa594810119701f3"
+    "sha256": "fda10b67cf87706080f1dc104903680ec1e538bc42f459f973163c367ef564a7"
   }
 }
