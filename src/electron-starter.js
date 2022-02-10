@@ -77,7 +77,7 @@ function createWindow() {
       var fs = require('fs');
 
       // Set the save path, making Electron not to prompt a save dialog.
-      var filePath = app.getPath('home') + '/Etiquetas/';
+      var filePath = app.getPath('home') + '/fsj-app/';
       // delete directory recursively
       try {
         fs.rmdirSync(filePath, { recursive: true });
