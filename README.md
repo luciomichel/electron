@@ -37,7 +37,7 @@ Após realizar o build da aplicação, será necessário incrementar a versão n
 Usamos uma dependência (_electron-simple-updater_), que atualiza a aplicação automaticamente.
 Apenas precisamos apontar um arquivo json (_updater.json_) que deve ficar hospedado em um servidor sem autenticação de arquivos.
 Estamos hospedando o mesmo no [nexus interno - PROD](https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/updater.json) / [nexus interno - HML](https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes-hml/updater.json) .
-Sempre que tiver uma atualização disponível, o app irá enviar uma requisição para a [API de gerenciamento](http://192.168.0.37:11000/swagger-ui.html) de versão com os seguintes dados:
+Sempre que tiver uma atualização disponível, o app irá enviar uma requisição para a [API de gerenciamento](https://gerenciadorversaoapi.srv.farmaciassaojoao.com.br) de versão com os seguintes dados:
 
 ```
 [POST] -> /gerenciadorversao/consultarVersao

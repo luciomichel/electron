@@ -79,13 +79,13 @@ async function verificarVersaoNoServidor(novaVersao) {
   try {
     console.log(`Body request ${JSON.stringify(data)}`)
     const resp = await axios.post(
-      'http://192.168.0.37:11000/gerenciadorversao/consultarVersao',
+      'https://gerenciadorversaoapi.srv.farmaciassaojoao.com.br/gerenciadorversao/consultarVersao',
       data,
       {
         timeout: 5000,
       }
     );
-
+    console.log('Response api -> ', JSON.stringify(resp));
     if (resp.data && resp.data.data && resp.data.data.dtLimiteFmt) {
       const dataLimite = new Date(Date.parse(resp.data.data.dtLimiteFmt));
 
