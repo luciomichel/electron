@@ -75,9 +75,14 @@ function createWindow() {
     'will-download',
     (event, item, webContents) => {
       var fs = require('fs');
+      var filePath;
 
+      if (process.platform === 'linux') {
+        filePath = app.getPath('home') + '/fsj-app/';
+      } else {
+        filePath = app.getPath('home') + '\\fsj-app\\';
+      }
       // Set the save path, making Electron not to prompt a save dialog.
-      var filePath = app.getPath('home') + '/fsj-app/';
       // delete directory recursively
       try {
         fs.rmdirSync(filePath, { recursive: true });
@@ -86,7 +91,7 @@ function createWindow() {
         console.error(`Error while deleting ${filePath}.`);
       }
 
-      if (!fs.existsSync(filePath)){
+      if (!fs.existsSync(filePath)) {
         fs.mkdirSync(filePath);
       }
 
