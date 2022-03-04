@@ -1,6 +1,7 @@
 const path = require('path');
 const electron = require('electron');
 const { shell } = require('electron');
+const { Notification } = require('electron');
 require('dotenv').config();
 
 require('./electron-updater');
@@ -16,7 +17,20 @@ const getTitle = (subTitle) => {
   return windowTitle;
 };
 
+function showNotification({ title, body }) {
+  const notification = {
+    title: title,
+    body: body,
+  };
+  new Notification(notification).show();
+}
+
 function createWindow() {
+  const versao = require('./../package.json').version;
+  showNotification({
+    title: 'Central de Aplicações',
+    body: `Versão: ${versao}`,
+  });
   globalShortcut.register('Shift+Control+D', () => {
     beEaster.push('D');
     beEaster.shift();

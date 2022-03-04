@@ -77,7 +77,7 @@ async function verificarVersaoNoServidor(novaVersao) {
   // console.log('Manda a versão para o servidor', data);
 
   try {
-    console.log(`Body request ${JSON.stringify(data)}`)
+    console.log(`Body request ${JSON.stringify(data)}`);
     const resp = await axios.post(
       'http://192.168.0.37:11000/gerenciadorversao/consultarVersao',
       data,
