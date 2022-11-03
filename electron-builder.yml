@@ -1,0 +1,4 @@
+appId: app-electron
+publish:
+  provider: github
+  token: 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 
