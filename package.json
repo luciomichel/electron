@@ -16,7 +16,6 @@
     "electron-builder": "^23.6.0"
   },"repository": {
     "type" : "git",
-    //Repositorio da Aplicação
     "url" : ""
   },
   "dependencies": {
