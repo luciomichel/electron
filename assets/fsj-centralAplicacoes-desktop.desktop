@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Central de Aplicações
+Exec=/opt/apps/centralAplicacoes/./Central-aplicacoes.AppImage --no-sandbox
+Terminal=false
+Type=Application
+Icon=/opt/apps/centralAplicacoes/fsj-centralAplicacoes-desktop.png
+StartupWMClass=Central-de-Aplicacoes
+Comment=Central de Aplicações - Área onde engloba várias aplicações da Rede de Farmácias São João
+Categories=Utility;
