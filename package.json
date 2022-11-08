@@ -18,6 +18,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "dotenv": "^8.2.0",
+    "electron-builder-squirrel-windows": "^24.0.0-alpha.3",
     "electron-simple-updater": "https://github.com/AdemilsonMarsiglio/electron-simple-updater.git#linux-appimage-nosandbox",
     "electron-toaster": "^2.0.4",
     "update-electron-app": "^2.0.1"
@@ -55,8 +56,11 @@
     },
     "win": {
       "icon": "assets/icons/icon.ico",
+      "signingHashAlgorithms": ["sha256"],
+      "verifyUpdateCodeSignature": false,
       "target": [
-        "zip"
+        "zip",
+        "nsis"
       ]
     },
     "directories": {
