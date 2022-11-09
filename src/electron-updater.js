@@ -16,7 +16,7 @@ const init = () => {
   // TODO: Para compilar em HML alterar o endereco abaixo para https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes-hml/updater.json
   updater.init({
     url: "https://nexus.farmaciassaojoao.com.br/repository/static-hosted/central-aplicacoes/updater.json",
-    checkUpdateOnStart: true,
+    checkUpdateOnStart: fs.existsSync(path.resolve(path.dirname(process.execPath), '..', 'update.exe')),
   });
 
   attachUpdaterHandlers();
