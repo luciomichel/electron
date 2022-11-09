@@ -6,6 +6,7 @@
 
 const updater = require("electron-simple-updater");
 const { dialog, Notification, app } = require("electron");
+var fs = require('fs');
 
 const os = require("os");
 const path = require("path");
