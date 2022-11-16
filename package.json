@@ -15,8 +15,8 @@
     "electron": "^21.2.0",
     "electron-builder": "^23.6.0"
   },"repository": {
-    "type" : "git",
-    "url" : "https://github.com/luciomichel/electron.git"
+    "type" : "gitlab",
+    "url" : "https://gitlab.farmaciassaojoao.com.br/fsj-platform/fsj-link-projects-desktop.git"
   },
   "dependencies": {
     "electron-updater": "^5.3.0"

@@ -1,4 +1,4 @@
 appId: app-electron
 publish:
-  provider: github
-  token: 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
+  provider: gitlab
+  token: Zb5p8hAqz3kpmwm-zYLB 

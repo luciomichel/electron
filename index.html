@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-  <title>Electron Auto Update Example</title>
+  <title>Central de Aplicações</title>
   <style>
     body {
       box-sizing: border-box;
@@ -26,7 +26,6 @@
   </style>
 </head>
 <body>
-  <h1>Electron Auto Update Example</h1>
   <p id="version"></p>
   <script>
     const { ipcRenderer } = require('electron');
@@ -39,17 +38,17 @@
     ipcRenderer.send('app_version');
     ipcRenderer.on('app_version', (event, arg) => {
       ipcRenderer.removeAllListeners('app_version');
-      version.innerText = 'Version ' + arg.version;
+      version.innerText = 'Versão ' + arg.version;
     });
 
     ipcRenderer.on('update_available', () => {
         ipcRenderer.removeAllListeners('update_available');
-        message.innerText = 'A new update is available. Downloading now...';
+        message.innerText = 'Nova atualização disponivel. Instale agora...';
         notification.classList.remove('hidden');
     });
     ipcRenderer.on('update_downloaded', () => {
         ipcRenderer.removeAllListeners('update_downloaded');
-        message.innerText = 'Update Downloaded. It will be installed on restart. Restart now?';
+        message.innerText = 'Atualização baixada. para instalar reinicie. reinicie agora?';
         restartButton.classList.remove('hidden');
         notification.classList.remove('hidden');
     }); 
