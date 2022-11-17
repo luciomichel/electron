@@ -1,0 +1,4 @@
+appId: app-electron
+publish:
+  provider: gitlab
+  token: Zb5p8hAqz3kpmwm-zYLB 
